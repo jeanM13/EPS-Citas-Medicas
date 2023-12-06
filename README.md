@@ -7,7 +7,7 @@ You can clone this repo as starter project for your Express, MySQL API server
 ## Features and Functionalities 😃
 
 - Node, Express, Typescript, MySQL and Sequelize as ORM Basic REST API
-- CRUD Operations (A Controller for this)
+- CRUD Operationpmns (A Controller for this)
 - SQL for database: Relational MySQL - Use ORM Sequelize
 
 ## Tech Stack 💻

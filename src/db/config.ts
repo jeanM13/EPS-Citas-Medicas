@@ -16,4 +16,5 @@ const connection = new Sequelize({
   models: [Paciente, Cita, Doctor]
 });
 
+
 export default connection;
