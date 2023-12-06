@@ -8,10 +8,11 @@ dotenv.config();
 
 const connection = new Sequelize({
   dialect: "mysql",
-  host: process.env.HOST,
+  host: '127.0.0.1',
+  port: 3306,
   username: 'root',
-  password: process.env.PASSWORD,
-  database: process.env.DB,
+  password: 'root',
+  database: 'citas',
   logging: false,
   models: [Paciente, Cita, Doctor]
 });
