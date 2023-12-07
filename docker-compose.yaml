@@ -1,0 +1,27 @@
+services:
+  mysqldb:
+    image: mysql:8.0
+    container_name: MySQLCitasMedicas
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    volumes:
+      - ./mysql/init.sql:/docker-entrypoint-initdb.d/0_init.sql
+      - ./SqlDb/bs.sql:/docker-entrypoint-initdb.d/0_up.sql
+      - $HOME/database:/var/lib/mysql
+    ports:
+      - 3306:3306
+    expose:
+      - 3306
+    enviroment:
+      MYSQL_DATABASE: citas
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: MySQLCitasMedicas
+    networks:
+       - internalnet
+networks:
+  internalnet:
+    driver: bridge
+
