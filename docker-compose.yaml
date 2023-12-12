@@ -6,7 +6,7 @@ services:
     restart: unless-stopped
     volumes:
       - ./mysql/init.sql:/docker-entrypoint-initdb.d/0_init.sql
-      - ./SqlDb/bs.sql:/docker-entrypoint-initdb.d/0_up.sql
+      - ./SqlDb/bd.sql:/docker-entrypoint-initdb.d/0_up.sql
       - $HOME/database:/var/lib/mysql
     ports:
       - 3306:3306
@@ -20,7 +20,7 @@ services:
       SERVICE_TAGS: dev
       SERVICE_NAME: MySQLCitasMedicas
     networks:
-       - internalnet
+        - internalnet
 networks:
   internalnet:
     driver: bridge

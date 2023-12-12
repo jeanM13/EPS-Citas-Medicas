@@ -1,5 +1,19 @@
-# Basic API REST Citas
-
+API-REST Citas medicas
 Node.js, Express.js, MySQL, Sequelize and Typescript Basic REST API.
 
-Desarrollo de Api
+Tech Stack
+* Node
+* Express
+* Docker
+* Typescript
+* Sequelize
+
+Modelo relacional
+Se adjunta el modelo relacional usado para este proyecto.
+
+Screenshots
+
+![Alt text](image-1.png)
+
+
+
